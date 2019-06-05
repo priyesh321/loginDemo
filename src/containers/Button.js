@@ -1,11 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getRegister } from '../actions/index'
-let Button = ({ getRegister }) => (
-    <button onClick={getRegister}>Register</button>
+import { getRegister, getEmployee } from '../actions/index'
+
+// let Button = ({ getRegister }) => (
+//     <button onClick={getRegister} style={{ marginTop: 20 }}>Register</button>
+// )
+let Button = ({ getEmployee }) => (
+    <button onClick={getEmployee} style={{ marginTop: 20 }}>Employee List</button>
 )
+
 const mapDispatchToProps = {
-    getRegister: getRegister,
+
+    getEmployee: getEmployee
 };
 Button = connect(null, mapDispatchToProps)(Button);
-export default Button;
+export default Button
